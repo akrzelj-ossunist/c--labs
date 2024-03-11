@@ -1,0 +1,14 @@
+F:\dot-net-labs\bin\Debug\net8.0\dot-net-labs.exe
+F:\dot-net-labs\bin\Debug\net8.0\dot-net-labs.deps.json
+F:\dot-net-labs\bin\Debug\net8.0\dot-net-labs.runtimeconfig.json
+F:\dot-net-labs\bin\Debug\net8.0\dot-net-labs.dll
+F:\dot-net-labs\bin\Debug\net8.0\dot-net-labs.pdb
+F:\dot-net-labs\obj\Debug\net8.0\dot-net-labs.GeneratedMSBuildEditorConfig.editorconfig
+F:\dot-net-labs\obj\Debug\net8.0\dot-net-labs.AssemblyInfoInputs.cache
+F:\dot-net-labs\obj\Debug\net8.0\dot-net-labs.AssemblyInfo.cs
+F:\dot-net-labs\obj\Debug\net8.0\dot-net-labs.csproj.CoreCompileInputs.cache
+F:\dot-net-labs\obj\Debug\net8.0\dot-net-labs.dll
+F:\dot-net-labs\obj\Debug\net8.0\refint\dot-net-labs.dll
+F:\dot-net-labs\obj\Debug\net8.0\dot-net-labs.pdb
+F:\dot-net-labs\obj\Debug\net8.0\dot-net-labs.genruntimeconfig.cache
+F:\dot-net-labs\obj\Debug\net8.0\ref\dot-net-labs.dll
