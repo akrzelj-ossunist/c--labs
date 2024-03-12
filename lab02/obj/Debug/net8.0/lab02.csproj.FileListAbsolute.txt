@@ -1,0 +1,15 @@
+F:\c--labs\lab02\bin\Debug\net8.0\lab02.exe
+F:\c--labs\lab02\bin\Debug\net8.0\lab02.deps.json
+F:\c--labs\lab02\bin\Debug\net8.0\lab02.runtimeconfig.json
+F:\c--labs\lab02\bin\Debug\net8.0\lab02.dll
+F:\c--labs\lab02\bin\Debug\net8.0\lab02.pdb
+F:\c--labs\lab02\obj\Debug\net8.0\lab02.GeneratedMSBuildEditorConfig.editorconfig
+F:\c--labs\lab02\obj\Debug\net8.0\lab02.AssemblyInfoInputs.cache
+F:\c--labs\lab02\obj\Debug\net8.0\lab02.AssemblyInfo.cs
+F:\c--labs\lab02\obj\Debug\net8.0\lab02.csproj.CoreCompileInputs.cache
+F:\c--labs\lab02\obj\Debug\net8.0\lab02.sourcelink.json
+F:\c--labs\lab02\obj\Debug\net8.0\lab02.dll
+F:\c--labs\lab02\obj\Debug\net8.0\refint\lab02.dll
+F:\c--labs\lab02\obj\Debug\net8.0\lab02.pdb
+F:\c--labs\lab02\obj\Debug\net8.0\lab02.genruntimeconfig.cache
+F:\c--labs\lab02\obj\Debug\net8.0\ref\lab02.dll
