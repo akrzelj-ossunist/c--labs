@@ -1,0 +1,34 @@
+﻿<Window x:Class="Lab03.PatientForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab03"
+        mc:Ignorable="d"
+        Title="PatientForm" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10" Width="400px">
+            <Label Margin="0" Padding="0">OIB:</Label>
+            <TextBox Text="{Binding OIB, UpdateSourceTrigger=PropertyChanged}" Name="OibText" Margin="0 0 0 5"/>
+            
+            <Label Margin="0" Padding="0">MBO:</Label>
+            <TextBox Text="{Binding MBO, UpdateSourceTrigger=PropertyChanged}" Name="MboText" Margin="0 0 0 5"/>
+
+            <Label Margin="0" Padding="0">Full Name:</Label>
+            <TextBox Text="{Binding FullName, UpdateSourceTrigger=PropertyChanged}" Name="NameText" Margin="0 0 0 5"/>
+
+            <Label Margin="0" Padding="0">Birthday:</Label>
+            <DatePicker SelectedDate="{Binding Birthday, UpdateSourceTrigger=PropertyChanged}" Name="BdayText" Margin="0 0 0 5"/>
+
+            <ComboBox Name="GenderComboBox" Margin="0 0 0 5">
+                <ComboBoxItem Content="Male"/>
+                <ComboBoxItem Content="Female"/>
+            </ComboBox>
+
+            <Label Margin="0" Padding="0">Diagnosis:</Label>
+            <TextBox Text="{Binding Diagnosis, UpdateSourceTrigger=PropertyChanged}" Name="DiagnosisText" Margin="0 0 0 5"/>
+
+            <Button Content="Submit" Click="SubmitButton_Click" HorizontalAlignment="Center" Margin="0 10"/>
+        </StackPanel>
+    </Grid>
+</Window>
