@@ -7,6 +7,56 @@
         mc:Ignorable="d"
         Title="PatientList" Height="450" Width="800">
     <Grid>
-        
+        <ListBox ItemsSource="{Binding Patients}" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="LightGray" BorderThickness="1" Margin="5" Padding="5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="OIB:" Grid.Row="0" Grid.Column="0" FontWeight="Bold"/>
+                            <TextBlock Name="OIBTextBlock" Text="{Binding OIB}" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+                            <TextBlock Text="MBO:" Grid.Row="1" Grid.Column="0" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding MBO}" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+                            <TextBlock Text="Full Name:" Grid.Row="2" Grid.Column="0" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding FullName}" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+                            <TextBlock Text="Birthday:" Grid.Row="3" Grid.Column="0" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Birthday}" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+                            <TextBlock Text="Gender:" Grid.Row="4" Grid.Column="0" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Gender}" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+                            <TextBlock Text="Diagnosis:" Grid.Row="5" Grid.Column="0" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Diagnosis}" Grid.Row="5" Grid.Column="1" Margin="5"/>
+
+                            <!-- Edit Button -->
+                            <Button Content="Edit" Grid.Row="6" Grid.Column="2" Margin="5" Padding="5" Click="EditButton_Click"/>
+
+                            <!-- Delete Button -->
+                            <Button Content="Delete" Grid.Row="6" Grid.Column="3" Margin="5" Padding="5" Click="DeleteButton_Click" CommandParameter="{Binding}" />
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </Window>

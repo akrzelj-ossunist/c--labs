@@ -13,38 +13,41 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-/* 
- plan kreirati usera preko forme u PatientForm i od tamo kreiranog usera poslat u MainWindow ali kada ga posaljem main window se ni ne otvori
- */
+
 namespace Lab03
 {
     public partial class MainWindow : Window
     {
+
+        public Patient Patient { get; set; }
+        public Hospital Hospital { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
 
-            PatientForm patientForm = new PatientForm();
-            patientForm.ShowDialog();
-            Patient newPatient = patientForm.NewPatient;
-            if (newPatient != null)
-            {
-                Menu(newPatient);
-            }
+            Hospital = new Hospital();
         }
 
-        public void Menu(Patient patient)
+        public void Menu()
         {
-            Hospital hospital = new Hospital();
-            hospital.Add(patient);
-            hospital.Print();
+            Hospital.Add(Patient);
+            Hospital.Print();
         }
 
         private void RedirectToPatientForm_Click(object sender, RoutedEventArgs e)
         {
-            PatientForm patientForm = new PatientForm();
+            PatientForm patientForm = new PatientForm(this);
             patientForm.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        private void RedirectToPatientList_Click(object sender, RoutedEventArgs e)
+        {
+
+            PatientList patientList = new PatientList(Hospital);
+            patientList.Show();
+            this.Hide();
         }
     }
 }

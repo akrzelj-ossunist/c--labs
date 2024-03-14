@@ -1,30 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Lab03
 {
-    internal class Hospital
+    public class Hospital
     {
-        private List<Patient> patients = new List<Patient>();
+        public ObservableCollection<Patient> Patients { get; set; } = new ObservableCollection<Patient>();
 
         public void Add(Patient patient)
         {
-            patients.Add(patient);
+            Patients.Add(patient);
         }
 
         public void Remove(string OIB)
         {
-            Patient patient = patients.Find(el => el.OIB == OIB);
+            Patient patientToRemove = Patients.FirstOrDefault(p => p.OIB == OIB);
 
-            if (patient != null) patients.Remove(patient);
+            if (patientToRemove != null)
+            {
+                Patients.Remove(patientToRemove);
+            }
         }
 
         public void Edit(Patient patientDto)
         {
-            Patient patient = patients.Find(el => el.OIB == patientDto.OIB);
+            Patient patient = Patients.FirstOrDefault(p => p.OIB == patientDto.OIB);
 
             Remove(patient.OIB);
 
@@ -38,10 +43,15 @@ namespace Lab03
             Add(patient);
         }
 
+        public Patient FindByOib(string OIB)
+        {
+            return Patients.FirstOrDefault(p => p.OIB == OIB);
+        }
+
         public void Print()
         {
             Console.WriteLine("\nPatients:");
-            foreach (var patient in patients)
+            foreach (var patient in Patients)
             {
                 Console.WriteLine($"\nOIB: {patient.OIB}, \nMBO: {patient.MBO}, \nFull Name: {patient.FullName}, \nBirthday: {patient.Birthday}, \nGender: {patient.Gender}, \nDiagnosis: {patient.Diagnosis}");
             }

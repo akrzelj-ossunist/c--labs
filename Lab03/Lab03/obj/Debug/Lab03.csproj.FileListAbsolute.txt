@@ -17,3 +17,5 @@ F:\c--labs\Lab03\Lab03\obj\Debug\PatientForm.g.cs
 F:\c--labs\Lab03\Lab03\obj\Debug\PatientList.g.cs
 F:\c--labs\Lab03\Lab03\obj\Debug\PatientForm.baml
 F:\c--labs\Lab03\Lab03\obj\Debug\PatientList.baml
+F:\c--labs\Lab03\Lab03\obj\Debug\EditPatientForm.g.cs
+F:\c--labs\Lab03\Lab03\obj\Debug\EditPatientForm.baml

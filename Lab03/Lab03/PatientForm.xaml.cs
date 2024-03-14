@@ -18,26 +18,23 @@ namespace Lab03
     public partial class PatientForm : Window
     {
 
-        public Patient NewPatient { get; private set; }
+        public Patient NewPatient { get; set; }
 
-        public PatientForm()
+        public MainWindow MainWindow { get; set; }
+
+        public PatientForm(MainWindow mainWindow)
         {
             InitializeComponent();
+            MainWindow = mainWindow;
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            // Validate the input fields
-            if (!ValidateInputs())
-            {
-                MessageBox.Show("Please fill in all required fields correctly.");
-                return;
-            }
-
             NewPatient = new Patient(OibText.Text, MboText.Text, NameText.Text, BdayText.SelectedDate.GetValueOrDefault(), ((ComboBoxItem)GenderComboBox.SelectedItem).Content.ToString(), DiagnosisText.Text);
 
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            MainWindow.Patient = NewPatient;
+            MainWindow.Menu();
+            MainWindow.Show();
             this.Close();
         }
         private bool ValidateInputs()
