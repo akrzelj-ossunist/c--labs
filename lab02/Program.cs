@@ -12,7 +12,7 @@ class Program
 
         Patient ana = new("12345678912", "123456743", "Ana Anic", DateTime.Parse("1996-01-16"), "Female", "Dont wanna go to work!");
 
-        Patient jimmy = new("43345678942", "126556743", "Jimmy Johnny", DateTime.Parse("4996-01-16"), "Turtle", "Unknown!");
+        Patient jimmy = new("43345678942", "126556743", "Jimmy Johnny", DateTime.Parse("4996-01-16"), "Male", "Broken leg!");
 
         Hospital hospital = new();
 
@@ -26,7 +26,7 @@ class Program
 
         hospital.Print();
 
-        jimmy.Gender = "NotTurtle";
+        jimmy.Gender = "Female";
 
         hospital.Edit(jimmy);
 
